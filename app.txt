@@ -1,0 +1,169 @@
+<!-- <template>
+  <header class="text-center">
+    <h1 class="text-5xl font-extrabold">Facturier</h1>
+    <p>Le générateur de factures et de devis</p>
+  </header>
+
+  <form
+    @submit.prevent="handleSubmit"
+    class="container border mx-auto my-11 p-5 rounded-md shadow-md"
+  >
+    <div>
+      <h2>Type de document</h2>
+      <select name="typeDoc" id="" class="p-2" v-model="typeDoc">
+        <option value="facture">Facture</option>
+        <option value="devis">Devis</option>
+      </select>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <div>
+      <h2>Client</h2>
+      <div>
+        <label for="prenom">Prénom</label> <br />
+        <input
+          type="text"
+          id="prenom"
+          placeholder="Prénom du client"
+          class="rounded-md"
+          v-model="client.prenom"
+        />
+      </div>
+      <div>
+        <label for="nom">Nom</label> <br />
+        <input
+          type="text"
+          id="nom"
+          placeholder="Nom du client"
+          class="rounded-md"
+          v-model="client.nom"
+        />
+      </div>
+      <div>
+        <label for="adresse">Adresse</label> <br />
+        <input
+          type="text"
+          id="adresse"
+          placeholder="Adresse du client"
+          class="rounded-md"
+          v-model="client.adresse"
+        />
+      </div>
+      <div>
+        <label for="pays">Pays</label> <br />
+        <input
+          type="text"
+          id="pays"
+          placeholder="Pays du client"
+          class="rounded-md"
+          v-model="client.pays"
+        />
+      </div>
+      <div>
+        <label for="ville">Ville</label> <br />
+        <input
+          type="text"
+          id="ville"
+          placeholder="Ville du client"
+          class="rounded-md"
+          v-model="client.ville"
+        />
+      </div>
+      <div>
+        <label for="codePostal">Code Postal</label> <br />
+        <input
+          type="text"
+          id="codePostal"
+          placeholder="Code Postal du client"
+          class="rounded-md"
+          v-model="client.codePostal"
+        />
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div>
+      <h2>Produits</h2>
+      <div>
+        <label for="produit">Produit</label> <br />
+        <input
+          type="text"
+          id="produit"
+          placeholder="Nom du produit"
+          class="rounded-md"
+          v-model="produit.produit"
+        />
+      </div>
+      <div>
+        <label for="prix">Prix</label> <br />
+        <input
+          type="number"
+          id="prix"
+          placeholder="Prix du produit"
+          class="rounded-md"
+          v-model="produit.prix"
+        />
+      </div>
+      <div>
+        <label for="quantite">Quantite</label> <br />
+        <input
+          type="number"
+          id="quantite"
+          placeholder="Quantite du produit"
+          class="rounded-md"
+          v-model="produit.quantite"
+        />
+      </div>
+      <div>
+        <label for="tva">TVA</label> <br />
+        <input
+          type="text"
+          id="tva"
+          placeholder="TVA du produit"
+          class="rounded-md"
+          v-model="produit.tva"
+        />
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <button type="submit" class="bg-blue-500 text-white p-2 rounded-md w-full">
+      Générer le document
+    </button>
+  </form>
+</template>
+
+<script setup lang="ts">
+import { ref, reactive } from 'vue'
+import type { Client } from './interfaces/client.ts'
+import type { Produit } from './interfaces/produit.ts'
+const TVA = 0.15
+const produit = reactive<Produit>({
+  produit: 'banana',
+  prix: 0,
+  quantite: 0,
+  tva: TVA,
+})
+
+const client = reactive<Client>({
+  prenom: 'Dylane',
+  nom: 'Tano',
+  adresse: '555 Duke Street',
+  pays: 'Canada',
+  ville: 'Bathust',
+  codePostal: 'E2A 2X6',
+})
+
+const typeDoc = ref('facture')
+function handleSubmit() {
+  console.log('client', client)
+  console.log('produit', produit)
+  console.log('typeDoc', typeDoc.value)
+}
+</script>
+
+<style scoped lang="scss"></style> -->

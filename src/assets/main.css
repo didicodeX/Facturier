@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles here */
+
+input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  @apply text-gray-700
+} */
